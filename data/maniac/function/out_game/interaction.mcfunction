@@ -4,6 +4,7 @@ execute as @s[tag=tg_button] on target run function maniac:out_game/interaction/
 execute as @s[tag=yt_button] on target run function maniac:out_game/interaction/youtube
 execute as @s[tag=mcinside_button] on target run function maniac:out_game/interaction/mc_inside
 execute as @s[tag=start_button] run function maniac:out_game/interaction/check_limit
+execute as @s[tag=location_interaction] if function maniac:out_game/tag_check run function maniac:out_game/interaction/config/boolean/location_switch
 
 execute as @s[tag=admin_setter] on target run function maniac:objects/admin_button/set_admin
 
@@ -62,5 +63,10 @@ execute as @s[tag=helicopter_interaction] if function maniac:out_game/tag_check 
 
 execute as @s[tag=maniac_stamina_interaction] if function maniac:out_game/tag_check run function maniac:out_game/interaction/config/boolean/switch {score:maniac_stamina_switch, tag:maniac_stamina_interaction}
 execute as @s[tag=survivor_stamina_interaction] if function maniac:out_game/tag_check run function maniac:out_game/interaction/config/boolean/switch {score:survivor_stamina_switch, tag:survivor_stamina_interaction}
+
+execute as @s[tag=location_more] if function maniac:out_game/tag_check run scoreboard players add location_switch config 1
+execute as @s[tag=location_less] if function maniac:out_game/tag_check run scoreboard players remove location_switch config 1
+execute as @s[tag=location_more] if function maniac:out_game/tag_check run function maniac:location/update
+execute as @s[tag=location_less] if function maniac:out_game/tag_check run function maniac:location/update
 
 data remove entity @s interaction
