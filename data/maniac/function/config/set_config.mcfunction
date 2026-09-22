@@ -8,5 +8,6 @@ scoreboard players set max_medkits_using config 2
 scoreboard players set max_policeman_count config 3
 scoreboard players set min_player config 2 
 scoreboard players set max_player config 6
+scoreboard players set location_switch config 0
 
 tellraw @a {"text": "конфиг перезагружен"}

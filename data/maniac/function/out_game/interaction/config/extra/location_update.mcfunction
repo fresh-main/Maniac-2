@@ -1,0 +1,2 @@
+   $execute if score location_switch config matches 0 run data modify entity @n[tag=location_interaction_display] text set value '{"text":"Завод","bold":true,"color":"dark_gray"}'
+   $execute if score location_switch config matches 1 run data modify entity @n[tag=location_interaction_display] text set value '{"text":"Лагерь","bold":true,"color":"dark_green"}'

@@ -63,3 +63,6 @@ gamerule naturalRegeneration false
 gamerule keepInventory true
 gamerule doImmediateRespawn false
 gamerule fallDamage false
+
+execute unless data storage maniac:locations available run data modify storage maniac:locations available set value {}
+data modify storage maniac:locations available.loc_1 set value 1b
